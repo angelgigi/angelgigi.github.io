@@ -8,32 +8,28 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>博闻强记</description>
-    <pubDate>Thu, 17 Aug 2017 14:10:30 GMT</pubDate>
+    <pubDate>Mon, 04 Sep 2017 14:55:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Hello World</title>
-      <link>http://yoursite.com/2017/08/17/hello-world/</link>
-      <guid>http://yoursite.com/2017/08/17/hello-world/</guid>
-      <pubDate>Thu, 17 Aug 2017 14:10:30 GMT</pubDate>
+      <title>node.js - experss框架 </title>
+      <link>http://yoursite.com/2017/09/04/node-js-experss%E6%A1%86%E6%9E%B6/</link>
+      <guid>http://yoursite.com/2017/09/04/node-js-experss%E6%A1%86%E6%9E%B6/</guid>
+      <pubDate>Mon, 04 Sep 2017 02:48:44 GMT</pubDate>
       <description>
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;h2 id=&quot;为何写博客&quot;&gt;&lt;a href=&quot;#为何写博客&quot; class=&quot;headerlink&quot; title=&quot;为何写博客&quot;&gt;&lt;/a&gt;为何写博客&lt;/h2&gt;&lt;p&gt; 之前注册博客园就想写些技术贴，记录下自己学了哪些技术，踩过那些坑，但由于当时过于懒惰，没有实施起来。前几日看过一篇
       
       </description>
       
-      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      <content:encoded><![CDATA[<h2 id="为何写博客"><a href="#为何写博客" class="headerlink" title="为何写博客"></a>为何写博客</h2><p> 之前注册博客园就想写些技术贴，记录下自己学了哪些技术，踩过那些坑，但由于当时过于懒惰，没有实施起来。前几日看过一篇文章，印象最深刻的一句话是<strong>输出倒逼输入</strong>，其实就是说想要输出就要倒逼自己大量输入。所以觉得自己该做点什么逼迫自己学习技术的同时思考其原理，So 决定开始写博客，记录自己学过的知识点，踩过的坑。</p>
+<h2 id="搭建express框架"><a href="#搭建express框架" class="headerlink" title="搭建express框架"></a>搭建express框架</h2><h3 id="安装express"><a href="#安装express" class="headerlink" title="安装express"></a>安装express</h3><p>1.安装node.js 新建一个文件夹，进入目录查看node版本 <code>$ node --version</code><br>2.安装express并将其保存到依赖列表中<code>$ cnpm install express --save</code><br>3.以下几个重要的模块是需要与 express 框架一起安装的<br><code>$ cnpm install body-parser --save</code><br><code>$ cnpm install cookie-parser --save</code><br><code>$ cnpm install multer --save</code><br>4.查看express版本号<code>$ cnpm list express</code></p>
+<h3 id="输出”hello-world”"><a href="#输出”hello-world”" class="headerlink" title="输出”hello world”"></a>输出”hello world”</h3><p>1.创建 express_demo.js 文件，代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">var</span> app = express();</div><div class="line"> </div><div class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</div><div class="line">   res.send(<span class="string">'Hello World'</span>);</div><div class="line">&#125;)</div><div class="line"> </div><div class="line"><span class="keyword">var</span> server = app.listen(<span class="number">8081</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"> </div><div class="line">  <span class="keyword">var</span> host = server.address().address</div><div class="line">  <span class="keyword">var</span> port = server.address().port</div><div class="line"> </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"应用实例，访问地址为 http://%s:%s"</span>, host, port)</div><div class="line"> </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>2.执行代码<code>$ node express_demo.js</code><br>应用实例，访问地址为 <a href="http://0.0.0.0:8081" target="_blank" rel="external">http://0.0.0.0:8081</a></p>
 ]]></content:encoded>
       
-      <comments>http://yoursite.com/2017/08/17/hello-world/#disqus_thread</comments>
+      <comments>http://yoursite.com/2017/09/04/node-js-experss%E6%A1%86%E6%9E%B6/#disqus_thread</comments>
     </item>
     
   </channel>
